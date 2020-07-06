@@ -1,0 +1,9 @@
+secrets
+gnupg
+*.gpg
+keepassxc
+luks
+ssh
+
+mail
+root
