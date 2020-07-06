@@ -1,0 +1,32 @@
+auto-reload no
+bind-key j down
+bind-key k up
+bind-key g pageup
+bind-key G pagedown
+# bookmark-cmd ""
+browser w3m
+confirm-exit yes
+external-url-viewer urlview
+history-limit 0
+html-renderer "/usr/bin/w3m -I %{charset} -T text/html -dump; copiousoutput"
+keep-articles-days 30
+notify-screen yes
+# opml-url file:///
+refresh-on-startup yes
+reload-time 480
+save-path "{$XDG_DOWNLOAD_DIR}/saved_articles"
+# urls-source "opml"
+# user-agent "Googlebot/2.1; +http://www.google.com/bot.html)"
+
+macro m set browser "mpv %u" ; open-in-browser ; set browser w3m
+macro y set browser "echo -n %u | xclip -selection clipboard" ; open-in-browser ; set browser w3m
+
+# download-path "${XDG_DOWNLOAD_DIR}/podcasts/%h/%n"
+download-path "${XDG_DOWNLOAD_DIR}/podcasts/%n"
+# download-filename-format "%?u?%u&%Y-%b-%d-%H%M%S.unknown?"
+download-filename-format "%F_%n-%t.%e"
+max-downloads 4
+player "mpv"
+# podlist-format "%4i [%6dMB/%6tMB] [%5p %%] [%7k kb/s] %-20S %u → %F"
+# podlist-format "%i %u %-20S %F"
+podlist-format "%4i [%6dMB/%6tMB] [%5p %%] [%7k kb/s] %-20S %b"
